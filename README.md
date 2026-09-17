@@ -15,6 +15,13 @@ Module 3.
 - **Check Your Understanding** - a short quiz with answers, to confirm the concept actually landed
 - **Common Mistakes** - the specific errors beginners hit on this exact topic
 
+## Using VS Code
+
+If you have VS Code installed, see **`USING-VSCODE.md`** for setup and recommended extensions. Any lab step
+that creates a file via a terminal heredoc (`cat > file <<EOF ... EOF`) automatically includes a "Using VS Code
+instead" box right underneath it, showing exactly what file to create and what to paste in — no need to
+manually translate every heredoc yourself.
+
 ## Prerequisites (all modules)
 
 - Docker Desktop (or Docker Engine on Linux)
@@ -22,6 +29,7 @@ Module 3.
 - `kubectl` (from Module 4 onward)
 - `helm` (Module 6 only)
 - `openssl` (Module 7's TLS lab only)
+- VS Code (optional but recommended - see `USING-VSCODE.md`)
 
 ## Modules
 
