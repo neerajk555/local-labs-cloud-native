@@ -1,28 +1,56 @@
-# Local Docker & Kubernetes Fundamentals Labs
+# Docker & Kubernetes: A Beginner-Friendly Course
 
-Non-AWS track. Runs entirely on your own machine — no AWS account, no
-cost, no `$PARTICIPANT` variable needed, since there's nothing shared
-here. Sibling to `../aws-cloudnative-agentic-ai-labs/`, never modifies it.
+Runs entirely on your own machine - no AWS account, no cost. This replaces the earlier, more terse version of
+this track with a much more thorough, beginner-first course: every lab now includes a concept recap, guided
+steps, self-try exercises, a comprehension quiz, and a common-mistakes section.
 
-**Recommended:** do Module L3 (Kubernetes Fundamentals with `kind`)
-before the AWS repo's Module 4 (EKS) if you haven't used Kubernetes
-before — the concepts (Deployments, Services, namespaces, rolling
-updates) are identical; EKS just adds AWS-specific plumbing on top.
+**Assumes no prior Docker or Kubernetes knowledge.** If you already know Docker well, you can likely start at
+Module 3.
 
-## Prerequisites
+## How each lab is structured
 
-- Docker Desktop
-- `kind` (`go install sigs.k8s.io/kind@latest` or via package manager)
-- `kubectl`
-- `helm` (Module L5 only)
+- **Concept Recap** - the idea explained in plain language, before any commands
+- **Steps** - guided, one small action at a time
+- **Try It Yourself** - 1-2 exercises you do without step-by-step instructions (hints available if you get stuck)
+- **Check Your Understanding** - a short quiz with answers, to confirm the concept actually landed
+- **Common Mistakes** - the specific errors beginners hit on this exact topic
+
+## Prerequisites (all modules)
+
+- Docker Desktop (or Docker Engine on Linux)
+- `kind` (from Module 4 onward)
+- `kubectl` (from Module 4 onward)
+- `helm` (Module 6 only)
+- `openssl` (Module 7's TLS lab only)
 
 ## Modules
 
-| Module | Topic |
-|---|---|
-| L1 | Docker Fundamentals Deep-Dive |
-| L2 | Docker Compose |
-| L3 | Kubernetes Fundamentals with `kind` |
-| L4 | Kubernetes Workloads & Storage |
-| L5 | Helm: Authoring Your Own Chart |
-| L6 | Ingress (ingress-nginx) |
+| Module | Topic | Labs |
+|---|---|---|
+| 0 | Containers 101 (concepts, minimal CLI) | 4 |
+| 1 | Docker Basics | 11 (incl. mini-project) |
+| 2 | Docker Compose | 10 (incl. mini-project) |
+| 3 | Kubernetes Concepts (no CLI) | 4 |
+| 4 | Kubernetes Basics with kind | 12 (incl. mini-project) |
+| 5 | Workloads & Storage | 6 |
+| 6 | Helm Basics | 6 |
+| 7 | Ingress & Networking | 6 |
+| 8 | Capstone Project | 1 (multi-part) |
+
+**Total: 60 labs/exercises across 9 modules**, versus 25 in the previous version.
+
+## Suggested pace
+
+This is intentionally NOT a "do it all in a weekend" course. A reasonable pace for someone new to this material:
+
+- Modules 0-2 (Docker): 1-2 weeks, a few labs per session
+- Module 3 (K8s concepts): a single sitting - it's short and conceptual, but important not to skip
+- Modules 4-5 (K8s core): 2-3 weeks, this is the bulk of the material
+- Modules 6-7 (Helm, Ingress): 1 week
+- Module 8 (Capstone): as long as it takes - this is meant to be genuinely challenging
+
+## If you get stuck
+
+Every lab's Common Mistakes section covers the most frequent beginner errors for that specific topic - check
+there before searching elsewhere. The Check Your Understanding quizzes are also a good way to identify which
+concept (not just which command) you're missing.
